@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/cliente.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Registro Cliente</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px;">
+        <a class="navbar-brand" href="index.html">Meteoro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vista
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="inventario.html">Inventario</a>
+                <a class="dropdown-item" href="clientes.html">Clientes</a>
+                <a class="dropdown-item" href="rentas.html">Rentas activas</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container" style="background-color: rgb(233, 233, 233);">
+        <h1 class="text-center" style="margin-bottom: 20px;">Registrar nuevo usuario</h1>
+        <form>
+            <div class="form-group row">
+                <label for="cedula" class="col-sm-2 col-form-label">Cédula</label>
+                <div class="col-sm-10">
+                    <input type="text" id="cedula" class="form-control" onblur="verificarCliente()">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" id="nombre" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="apellido">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" id="email" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
+                <div class="col-sm-10">
+                    <input type="text" id="telefono" class="form-control">
+                </div>
+            </div>
+            <div class="col text-center">
+                <button type="button" class="btn btn-primary btn-lg" id="registrar">Continuar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

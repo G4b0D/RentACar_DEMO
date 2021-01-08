@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Completar Renta</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px;">
+        <a class="navbar-brand" href="index.html">Meteoro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vista
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="inventario.html">Inventario</a>
+                <a class="dropdown-item" href="clientes.html">Clientes</a>
+                <a class="dropdown-item" href="rentas.html">Rentas activas</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <form>
+            <h4 class="text-center" style="margin-bottom: 20px;">Información del cliente</h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" disabled class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" disabled class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="cedula">Cedula</label>
+                    <input type="text" id="cedula" class="form-control" disabled>
+                </div>
+            </div>
+            <h4 class="text-center" style="margin-top: 10px; margin-bottom: 20px;">Información de la renta</h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" disabled class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="modelo">Modelo</label>
+                    <input type="text" class="form-control" id="modelo" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fechaInicio">Fecha de inicio</label>
+                    <input type="date" id="fechaInicio" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fechaFinal">Fecha de devolución</label>
+                    <input type="date" id="fechaFinal" class="form-control" onchange="calcularprecio()">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" class="form-control" disabled>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="metodo">Metodo de pago</label>
+                    <select name="metodo" id="metodo" class="form-control">
+                        <option value="Tarjeta de Credito" selected>Tarjeta de credito</option>
+                        <option value="Tarjeta de Debito">Tarjeta de debito</option>
+                        <option value="Efectivo">Efectivo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col text-right">
+                <button type="button" class="btn btn-primary" onclick="rentar()">Completar renta</button>
+            </div>
+        </form>
+    </div>
+    <script src="./js/completar.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Meteoro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vista
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="inventario.html">Inventario</a>
+                <a class="dropdown-item" href="clientes.html">Clientes</a>
+                <a class="dropdown-item" href="rentas.html">Rentas activas</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class = "container">
+        <table class="table table-striped" style="margin-top: 10px;">
+            <tr  class="bg-info">
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+            </tr>
+        
+            <tbody id="myTable">
+            </tbody>
+        </table>
+    </div>
+    <script src="./js/inventario.js"></script>
+</body>
+</html>
